@@ -8,7 +8,6 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Gojek',
@@ -20,9 +19,10 @@ class MyApp extends StatelessWidget {
       home: new LauncherPage(),
     );
   }
-} 
+}
 
 //Sigit
-//Ismail 
+//Ismail
 //jojo
 //habibah
+//bunga
