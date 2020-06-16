@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magang/beranda/beranda_view.dart';
 import 'package:magang/constans.dart';
+
 class LandingPage extends StatefulWidget {
   @override
   _LandingPageState createState() => new _LandingPageState();
@@ -15,68 +16,67 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: _container[_bottomNavCurrentIndex],
-      bottomNavigationBar: _buildBottomNavigation()
-    );
+        body: _container[_bottomNavCurrentIndex],
+        bottomNavigationBar: _buildBottomNavigation());
   }
 
-  Widget _buildBottomNavigation(){
-  return new BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        onTap: (index) {
-          setState(() {
-            _bottomNavCurrentIndex = index;
-          });
-        },
-        currentIndex: _bottomNavCurrentIndex,
-        items: [
-          BottomNavigationBarItem(
-            activeIcon: new Icon(
-              Icons.home,
-              color: GojekPalette.green,
-            ),
-            icon: new Icon(
-              Icons.home,
-              color: Colors.grey,
-            ),
-            title: new Text(
-              'Beranda',
-            ),
+  Widget _buildBottomNavigation() {
+    return new BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      onTap: (index) {
+        setState(() {
+          _bottomNavCurrentIndex = index;
+        });
+      },
+      currentIndex: _bottomNavCurrentIndex,
+      items: [
+        BottomNavigationBarItem(
+          activeIcon: new Icon(
+            Icons.home,
+            color: GojekPalette.green,
           ),
-          BottomNavigationBarItem(
-            activeIcon: new Icon(
-              Icons.assignment,
-              color: GojekPalette.green,
-            ),
-            icon: new Icon(
-              Icons.assignment,
-              color: Colors.grey,
-            ),
-            title: new Text('Pesanan'),
+          icon: new Icon(
+            Icons.home,
+            color: Colors.grey,
           ),
-          BottomNavigationBarItem(
-            activeIcon: new Icon(
-              Icons.mail,
-              color: GojekPalette.green,
-            ),
-            icon: new Icon(
-              Icons.mail,
-              color: Colors.grey,
-            ),
-            title: new Text('Inbox'),
+          title: new Text(
+            'home',
           ),
-          BottomNavigationBarItem(
-            activeIcon: new Icon(
-              Icons.person,
-              color: GojekPalette.green,
-            ),
-            icon: new Icon(
-              Icons.person,
-              color: Colors.grey,
-            ),
-            title: new Text('Akun'),
+        ),
+        BottomNavigationBarItem(
+          activeIcon: new Icon(
+            Icons.assignment,
+            color: GojekPalette.green,
           ),
-        ],
-      );
+          icon: new Icon(
+            Icons.assignment,
+            color: Colors.grey,
+          ),
+          title: new Text('sanan'),
+        ),
+        BottomNavigationBarItem(
+          activeIcon: new Icon(
+            Icons.mail,
+            color: GojekPalette.green,
+          ),
+          icon: new Icon(
+            Icons.mail,
+            color: Colors.grey,
+          ),
+          title: new Text('Inbox'),
+        ),
+        BottomNavigationBarItem(
+          activeIcon: new Icon(
+            Icons.person,
+            color: GojekPalette.green,
+          ),
+          icon: new Icon(
+            Icons.person,
+            color: Colors.grey,
+          ),
+          title: new Text('Akun'),
+        ),
+      ],
+    );
   }
 }
