@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:magang/beranda/dd.dart';
+import 'package:magang/beranda/go_tik.dart';
+import 'package:magang/beranda/ss.dart';
 import 'dart:async';
 import 'dart:io';
 
@@ -21,15 +24,18 @@ class _BerandaPageState extends State<BerandaPage> {
     _gojekServiceList.add(new GojekService(
         image: Icons.directions_bike,
         color: GojekPalette.menuRide,
-        title: "GO-RIDE"));
+        title: "GO-RIDE",
+        url: SS()));
     _gojekServiceList.add(new GojekService(
         image: Icons.local_car_wash,
         color: GojekPalette.menuCar,
-        title: "GO-CAR"));
+        title: "GO-CAR",
+        url: DD()));
     _gojekServiceList.add(new GojekService(
         image: Icons.directions_car,
         color: GojekPalette.menuBluebird,
-        title: "GO-BLUEBIRD"));
+        title: "GO-TIK",
+        url: GOTik()));
     _gojekServiceList.add(new GojekService(
         image: Icons.restaurant,
         color: GojekPalette.menuFood,
@@ -232,7 +238,7 @@ class _BerandaPageState extends State<BerandaPage> {
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4),
                 itemBuilder: (context, position) {
-                  return _rowGojekService(_gojekServiceList[position]);
+                  return _rowGojekService(_gojekServiceList[position],);
                 })));
   }
 
@@ -244,11 +250,16 @@ class _BerandaPageState extends State<BerandaPage> {
           new GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: () {
-              showModalBottomSheet<void>(
-                  context: context,
-                  builder: (context) {
-                    return _buildMenuBottomSheet();
-                  });
+              // showModalBottomSheet<void>(
+              //     context: context,
+              //     builder: (context) {
+              //       return _buildMenuBottomSheet();
+              //     });
+              Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  gojekService.url));
             },
             child: new Container(
               decoration: new BoxDecoration(

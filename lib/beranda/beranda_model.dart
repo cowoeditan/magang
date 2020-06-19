@@ -4,8 +4,9 @@ class GojekService {
   IconData image;
   Color color;
   String title;
+  Widget url;
 
-  GojekService({this.image, this.title, this.color});
+  GojekService({this.image, this.title, this.color, this.url});
 }
 
 class Food {
