@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:magang/beranda/dd.dart';
-import 'package:magang/beranda/go_tik.dart';
-import 'package:magang/beranda/ss.dart';
+import 'package:magang/beranda/go_bills.dart';
+import 'package:magang/beranda/go_food.dart';
+import 'package:magang/beranda/go_game.dart';
+import 'package:magang/beranda/go_mart.dart';
+import 'package:magang/beranda/go_nearby.dart';
+import 'package:magang/beranda/go_point.dart';
+import 'package:magang/beranda/go_pulsa.dart';
+import 'package:magang/beranda/go_send.dart';
+import 'package:magang/beranda/go_shop.dart';
+import 'package:magang/beranda/go_sure.dart';
+import 'package:magang/beranda/go_tix.dart';
 import 'dart:async';
 import 'dart:io';
 
@@ -22,48 +30,68 @@ class _BerandaPageState extends State<BerandaPage> {
     super.initState();
 
     _gojekServiceList.add(new GojekService(
-        image: Icons.directions_bike,
+        image: Icons.games,
         color: GojekPalette.menuRide,
-        title: "GO-RIDE",
-        url: SS()));
+        title: "GO-GAME",
+        url: GoGame()
+        ));
     _gojekServiceList.add(new GojekService(
-        image: Icons.local_car_wash,
+        image: Icons.map,
         color: GojekPalette.menuCar,
-        title: "GO-CAR",
-        url: DD()));
+        title: "GO-NEARBY",
+        url: GoNearby()
+        ));
     _gojekServiceList.add(new GojekService(
-        image: Icons.directions_car,
+        image: Icons.directions,
         color: GojekPalette.menuBluebird,
-        title: "GO-TIK",
-        url: GOTik()));
+        title: "GO-SEND",
+        url: GoSend()
+        ));
     _gojekServiceList.add(new GojekService(
         image: Icons.restaurant,
         color: GojekPalette.menuFood,
-        title: "GO-FOOD"));
+        title: "GO-FOOD",
+        url: GoFood()));
     _gojekServiceList.add(new GojekService(
-        image: Icons.next_week,
+        image: Icons.monetization_on,
         color: GojekPalette.menuSend,
-        title: "GO-SEND"));
+        title: "GO-BILLS",
+        url: GoBills()));
     _gojekServiceList.add(new GojekService(
-        image: Icons.local_offer,
+        image: Icons.money_off,
         color: GojekPalette.menuDeals,
-        title: "GO-DEALS"));
+        title: "GO-POINT",
+        url: GoPoint()));
     _gojekServiceList.add(new GojekService(
         image: Icons.phonelink_ring,
         color: GojekPalette.menuPulsa,
-        title: "GO-PULSA"));
-    _gojekServiceList.add(new GojekService(
-        image: Icons.apps, color: GojekPalette.menuOther, title: "LAINNYA"));
+        title: "GO-PULSA",
+        url: GoPulsa()));
+        // _gojekServiceList.add(new GojekService(
+        // image: Icons.apps, 
+        // color: GojekPalette.menuOther, 
+        // title: "LAINNYA",
+        // url : _buildMenuBottomSheet() ));
     _gojekServiceList.add(new GojekService(
         image: Icons.shopping_basket,
         color: GojekPalette.menuShop,
-        title: "GO-SHOP"));
+        title: "GO-SHOP",
+        url: GoShop()));
     _gojekServiceList.add(new GojekService(
         image: Icons.shopping_cart,
         color: GojekPalette.menuMart,
-        title: "GO-MART"));
+        title: "GO-MART",
+        url: GoMart()));
     _gojekServiceList.add(new GojekService(
-        image: Icons.local_play, color: GojekPalette.menuTix, title: "GO-TIX"));
+        image: Icons.local_play,
+         color: GojekPalette.menuTix,
+          title: "GO-TIX",url: GoTix()));
+    _gojekServiceList.add(new GojekService(
+      image : Icons.supervisor_account,
+      color : GojekPalette.menuShop,
+      title : "GO-SURE",
+      url: GoSure()));
+      
   }
 
   @override
@@ -90,7 +118,7 @@ class _BerandaPageState extends State<BerandaPage> {
                 margin: EdgeInsets.only(top: 16.0),
                 child: new Column(
                   children: <Widget>[
-                    _buildGoFoodFeatured(),
+                    // _buildGoFoodFeatured(),
                   ],
                 ),
               )
@@ -229,12 +257,12 @@ class _BerandaPageState extends State<BerandaPage> {
   Widget _buildGojekServicesMenu() {
     return new SizedBox(
         width: double.infinity,
-        height: 220.0,
+        height: 495.0,
         child: new Container(
             margin: EdgeInsets.only(top: 8.0, bottom: 8.0),
             child: GridView.builder(
                 physics: ClampingScrollPhysics(),
-                itemCount: 8,
+                itemCount: 11,
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4),
                 itemBuilder: (context, position) {
@@ -353,87 +381,6 @@ class _BerandaPageState extends State<BerandaPage> {
     );
   }
 
-  Widget _buildPromo() {
-    return new Container(
-        margin: EdgeInsets.all(16.0),
-        child: FutureBuilder(
-          future: fetchPromo(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return new Column(
-                  children: snapshot.data.map<Widget>((data) {
-                return _rowPromo(data);
-              }).toList());
-            }
-            return Center(
-              child: SizedBox(
-                  width: 40.0,
-                  height: 40.0,
-                  child: const CircularProgressIndicator()),
-            );
-          },
-        ));
-  }
-
-  Widget _rowPromo(Promo promo) {
-    return new Container(
-      height: 320.0,
-      child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          new Container(
-            margin: EdgeInsets.only(bottom: 16.0),
-            width: double.infinity,
-            height: 1.0,
-            color: GojekPalette.grey200,
-          ),
-          new ClipRRect(
-            borderRadius: new BorderRadius.circular(8.0),
-            child: new Image.asset(
-              promo.image,
-              height: 172.0,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-          ),
-          new Padding(
-            padding: EdgeInsets.only(top: 16.0),
-          ),
-          new Text(
-            promo.title,
-            style: new TextStyle(fontFamily: "NeoSansBold", fontSize: 16.0),
-          ),
-          new Padding(
-            padding: EdgeInsets.only(top: 8.0),
-          ),
-          new Text(
-            promo.content,
-            maxLines: 2,
-            softWrap: true,
-            style: new TextStyle(color: Colors.grey, fontSize: 14.0),
-          ),
-          new Padding(
-            padding: EdgeInsets.only(top: 6.0),
-          ),
-          new Container(
-            alignment: Alignment.centerRight,
-            child: new MaterialButton(
-              color: GojekPalette.green,
-              onPressed: () {},
-              child: new Text(
-                promo.button,
-                style: new TextStyle(
-                    color: Colors.white,
-                    fontFamily: "NeoSansBold",
-                    fontSize: 12.0),
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
   Widget _buildMenuBottomSheet() {
     return new StatefulBuilder(builder: (c, s) {
       return new SafeArea(
@@ -466,7 +413,7 @@ class _BerandaPageState extends State<BerandaPage> {
             ],
           ),
           new Container(
-            height: 300.0,
+            height: 400.0,
             child: new GridView.builder(
                 physics: new NeverScrollableScrollPhysics(),
                 itemCount: _gojekServiceList.length,

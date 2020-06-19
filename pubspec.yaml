@@ -50,7 +50,8 @@ flutter:
     - assets/icons/icon_menu.png 
     - assets/icons/icon_saldo.png 
     - assets/icons/icon_scan.png 
-    - assets/icons/icon_transfer.png 
+    - assets/icons/icon_transfer.png
+    - assets/logo1.png 
    
    
    

@@ -14,9 +14,9 @@ class GojekAppBar extends AppBar {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           new Image.asset(
-            "assets/img_gojek_logo.png",
+            "assets/logo1.png",
             height: 50.0,
-            width: 100.0,
+            width: 30.0,
           ),
           new Container(
             child: new Row(
