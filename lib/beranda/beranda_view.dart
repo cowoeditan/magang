@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:magang/gofood/go_food.dart';
+import 'package:magang/gofood/go_tik.dart';
 import 'dart:async';
 // import 'dart:io';
 
@@ -21,7 +23,8 @@ class _BerandaPageState extends State<BerandaPage> {
     _gojekServiceList.add(new GojekService(
         image: Icons.directions_bike,
         color: GojekPalette.menuRide,
-        title: "GO-RIDE"));
+        title: "GO-RIDE",
+        url: GoTik()));
     _gojekServiceList.add(new GojekService(
         image: Icons.local_car_wash,
         color: GojekPalette.menuCar,
@@ -57,7 +60,10 @@ class _BerandaPageState extends State<BerandaPage> {
         color: GojekPalette.menuMart,
         title: "GO-MART"));
     _gojekServiceList.add(new GojekService(
-        image: Icons.local_play, color: GojekPalette.menuTix, title: "GO-TIX"));
+        image: Icons.local_play,
+        color: GojekPalette.menuTix,
+        title: "GO-TIX",
+        url: GoFood()));
   }
 
   @override
@@ -79,7 +85,7 @@ class _BerandaPageState extends State<BerandaPage> {
                       _buildGojekServicesMenu(),
                     ],
                   )),
-             new Container(
+              new Container(
                 color: Colors.white,
                 margin: EdgeInsets.only(top: 16.0),
                 child: new Column(
@@ -104,7 +110,9 @@ class _BerandaPageState extends State<BerandaPage> {
               end: Alignment.bottomCenter,
               colors: [const Color(0xff3164bd), const Color(0xff295cb5)],
             ),
-            borderRadius: new BorderRadius.all(new Radius.circular(3.0))),
+            borderRadius: new BorderRadius.all(new Radius.circular(3.0)
+            )
+            ),
         child: new Column(
           children: <Widget>[
             new Container(
@@ -117,7 +125,9 @@ class _BerandaPageState extends State<BerandaPage> {
                   ),
                   borderRadius: new BorderRadius.only(
                       topLeft: new Radius.circular(3.0),
-                      topRight: new Radius.circular(3.0))),
+                      topRight: new Radius.circular(3.0)
+                      )
+                      ),
               child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -280,7 +290,7 @@ class _BerandaPageState extends State<BerandaPage> {
         children: <Widget>[
           new Text(
             "GO-FOOD",
-            style: new TextStyle(fontFamily: "NeoSansBold"), 
+            style: new TextStyle(fontFamily: "NeoSansBold"),
           ),
           new Padding(
             padding: EdgeInsets.only(top: 8.0),

@@ -15,10 +15,4 @@ class GojekPalette {
   static Color menuShop = Color(0xff0b945e);
   static Color menuMart = Color(0xff68a9e3);
   static Color menuTix = Color(0xffe86f16);
-
-
-
-
-
-
 }
