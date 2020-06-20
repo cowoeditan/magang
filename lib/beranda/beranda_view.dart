@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:magang/beranda/widget/go_food.dart';
+import 'package:magang/beranda/widget/go_tik.dart';
 import 'dart:async';
-import 'dart:io';
 
 import '../constans.dart';
 import 'beranda_gojek_appbar.dart';
@@ -21,11 +22,12 @@ class _BerandaPageState extends State<BerandaPage> {
     _gojekServiceList.add(new GojekService(
         image: Icons.directions_bike,
         color: GojekPalette.menuRide,
-        title: "GO-RIDE"));
+        title: "GO-RIDE", 
+        url: GoFood()));
     _gojekServiceList.add(new GojekService(
         image: Icons.local_car_wash,
         color: GojekPalette.menuCar,
-        title: "GO-CAR"));
+        title: "GO-CAR", url: GoTik()));
     _gojekServiceList.add(new GojekService(
         image: Icons.directions_car,
         color: GojekPalette.menuBluebird,

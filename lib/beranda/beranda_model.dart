@@ -1,12 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:magang/beranda/widget/go_food.dart';
 
-class GojekService {
-  IconData image;
+// class GojekService {
+//   IconData image;
+//   Color color;
+//   String title;
+//   Widget url;
+
+//   GojekService({this.image, this.title, this.color, this.url});
+// }
+
+class GojekService extends StatefulWidget {
+ IconData image;
   Color color;
   String title;
-
-  GojekService({this.image, this.title, this.color});
+  Widget url;
+   GojekService({this.image, this.title, this.color, this.url});
+  @override
+  _GojekServiceState createState() => _GojekServiceState();
 }
+
+class _GojekServiceState extends State<GojekService> {
+  @override
+  Widget build(BuildContext context) {
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return GoFood();
+              }));
+            },
+          );
+  }
+}
+
 
 class Food {
   String title;
@@ -14,7 +40,7 @@ class Food {
   Food({this.title, this.image});
 }
 
-class Promo{
+class Promo {
   String image;
   String title;
   String content;
