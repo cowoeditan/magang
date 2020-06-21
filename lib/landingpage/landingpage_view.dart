@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:magang/beranda/beranda_view.dart';
+import 'package:magang/chat_view.dart';
 import 'package:magang/constans.dart';
 import 'package:magang/promo_view.dart';
+import 'package:magang/chat_view.dart';
 class LandingPage extends StatefulWidget {
   @override
   _LandingPageState createState() => new _LandingPageState();
@@ -11,7 +13,8 @@ class _LandingPageState extends State<LandingPage> {
   int _bottomNavCurrentIndex = 0;
   List<Widget> _container = [
     new BerandaPage(),
-    new PromoPage()
+    new PromoPage(),
+    new MenuChat()
   ];
 
   @override
