@@ -11,7 +11,6 @@ import 'package:magang/beranda/go_shop.dart';
 import 'package:magang/beranda/go_sure.dart';
 import 'package:magang/beranda/go_tix.dart';
 import 'dart:async';
-import 'dart:io';
 
 import '../constans.dart';
 import 'beranda_gojek_appbar.dart';
@@ -33,20 +32,17 @@ class _BerandaPageState extends State<BerandaPage> {
         image: Icons.games,
         color: GojekPalette.menuRide,
         title: "GO-GAME",
-        url: GoGame()
-        ));
+        url: GoGame()));
     _gojekServiceList.add(new GojekService(
         image: Icons.map,
         color: GojekPalette.menuCar,
         title: "GO-NEARBY",
-        url: GoNearby()
-        ));
+        url: GoNearby()));
     _gojekServiceList.add(new GojekService(
         image: Icons.directions,
         color: GojekPalette.menuBluebird,
         title: "GO-SEND",
-        url: GoSend()
-        ));
+        url: GoSend()));
     _gojekServiceList.add(new GojekService(
         image: Icons.restaurant,
         color: GojekPalette.menuFood,
@@ -67,11 +63,11 @@ class _BerandaPageState extends State<BerandaPage> {
         color: GojekPalette.menuPulsa,
         title: "GO-PULSA",
         url: GoPulsa()));
-        // _gojekServiceList.add(new GojekService(
-        // image: Icons.apps, 
-        // color: GojekPalette.menuOther, 
-        // title: "LAINNYA",
-        // url : _buildMenuBottomSheet() ));
+    // _gojekServiceList.add(new GojekService(
+    // image: Icons.apps,
+    // color: GojekPalette.menuOther,
+    // title: "LAINNYA",
+    // url : _buildMenuBottomSheet() ));
     _gojekServiceList.add(new GojekService(
         image: Icons.shopping_basket,
         color: GojekPalette.menuShop,
@@ -84,14 +80,14 @@ class _BerandaPageState extends State<BerandaPage> {
         url: GoMart()));
     _gojekServiceList.add(new GojekService(
         image: Icons.local_play,
-         color: GojekPalette.menuTix,
-          title: "GO-TIX",url: GoTix()));
+        color: GojekPalette.menuTix,
+        title: "GO-TIX",
+        url: GoTix()));
     _gojekServiceList.add(new GojekService(
-      image : Icons.supervisor_account,
-      color : GojekPalette.menuShop,
-      title : "GO-SURE",
-      url: GoSure()));
-      
+        image: Icons.supervisor_account,
+        color: GojekPalette.menuShop,
+        title: "GO-SURE",
+        url: GoSure()));
   }
 
   @override
@@ -113,7 +109,7 @@ class _BerandaPageState extends State<BerandaPage> {
                       _buildGojekServicesMenu(),
                     ],
                   )),
-             new Container(
+              new Container(
                 color: Colors.white,
                 margin: EdgeInsets.only(top: 16.0),
                 child: new Column(
@@ -266,7 +262,9 @@ class _BerandaPageState extends State<BerandaPage> {
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4),
                 itemBuilder: (context, position) {
-                  return _rowGojekService(_gojekServiceList[position],);
+                  return _rowGojekService(
+                    _gojekServiceList[position],
+                  );
                 })));
   }
 
@@ -283,11 +281,8 @@ class _BerandaPageState extends State<BerandaPage> {
               //     builder: (context) {
               //       return _buildMenuBottomSheet();
               //     });
-              Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  gojekService.url));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => gojekService.url));
             },
             child: new Container(
               decoration: new BoxDecoration(
@@ -319,7 +314,7 @@ class _BerandaPageState extends State<BerandaPage> {
         children: <Widget>[
           new Text(
             "GO-FOOD",
-            style: new TextStyle(fontFamily: "NeoSansBold"), 
+            style: new TextStyle(fontFamily: "NeoSansBold"),
           ),
           new Padding(
             padding: EdgeInsets.only(top: 8.0),

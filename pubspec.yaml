@@ -46,17 +46,27 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/gobills.png
+    - assets/banner_gobills.jpg
+    - assets/logo1.png 
     - assets/img_gojek_logo.png 
     - assets/icons/icon_menu.png 
     - assets/icons/icon_saldo.png 
     - assets/icons/icon_scan.png 
     - assets/icons/icon_transfer.png
-    - assets/logo1.png 
-   
-   
-   
-   
-   
+    - assets/icons/insurance.png
+    - assets/icons/money.png
+    - assets/icons/gas.png
+    - assets/icons/multifinance.png
+    - assets/icons/pbb.png
+    - assets/icons/pdam.png
+    - assets/icons/pkb.png
+    - assets/icons/pln.png
+    - assets/icons/postpaid.png
+    - assets/icons/retribution.png
+    - assets/icons/sekolah.png
+    - assets/icons/tax.png
+    - assets/icons/tvcable.png
     - assets/images/food_1.jpg
     - assets/images/food_2.jpg
     - assets/images/food_3.jpg
