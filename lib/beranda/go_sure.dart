@@ -1,11 +1,22 @@
+// import 'package:flutter/material.dart';
+// // import 'package:gojek_sure/go_sure.dart';
+
+// //import 'package:hello/homepage.dart';
+
+// void main() => runApp(MyApp());
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+
 import 'package:flutter/material.dart';
-// import 'package:gojek_sure/go_sure.dart';
 
-//import 'package:hello/homepage.dart';
+class GoSure extends StatefulWidget {
+  @override
+  _GoSureState createState() => _GoSureState();
+}
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class _GoSureState extends State<GoSure> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,9 +40,8 @@ class MyApp extends StatelessWidget {
                       style: TextStyle(
                           fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,color: Colors.black),
-
-                          
+                          fontSize: 20,
+                          color: Colors.black),
                     ),
                   ],
                 ),
@@ -82,12 +92,12 @@ class Gosure extends StatelessWidget {
                 Container(
                   // color: Colors.white,
                   // margin: EdgeInsets.all(10),
-                  margin: EdgeInsets.only(top:15,bottom: 15),
+                  margin: EdgeInsets.only(top: 15, bottom: 15),
                   child: Row(
                     children: <Widget>[
                       Container(
                         // margin: EdgeInsets.fromLTRB(0, 10, 15, 10),
-                        margin: EdgeInsets.only(right:15),
+                        margin: EdgeInsets.only(right: 15),
                         height: 200,
                         width: 130,
                         decoration: BoxDecoration(
@@ -126,25 +136,29 @@ class Gosure extends StatelessWidget {
                             ),
                             // Image.asset("assets/go_sure1.jpeg",height: 100,),
                             Container(
-                              margin: EdgeInsets.only(left:15,right:0,top:5),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Perlindungan Layar Ponsel",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("PasarPolis",textAlign: TextAlign.start,
-                              
-                              ),
-                                ],
-                              )
-                            )
-                            
+                                margin:
+                                    EdgeInsets.only(left: 15, right: 0, top: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Perlindungan Layar Ponsel",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "PasarPolis",
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(right:15),
+                        margin: EdgeInsets.only(right: 15),
                         height: 200,
                         width: 130,
                         decoration: BoxDecoration(
@@ -182,19 +196,24 @@ class Gosure extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(left:15,right:0,top:5),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Perlindungan Motor",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("PasarPolis",textAlign: TextAlign.start,
-                              
-                              ),
-                                ],
-                              )
-                            )
+                                margin:
+                                    EdgeInsets.only(left: 15, right: 0, top: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Perlindungan Motor",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "PasarPolis",
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       )
@@ -227,11 +246,11 @@ class Gosure extends StatelessWidget {
                 ),
                 Container(
                   // color: Colors.white,
-                  margin: EdgeInsets.only(top:15,bottom: 15),
+                  margin: EdgeInsets.only(top: 15, bottom: 15),
                   child: Row(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(right:15),
+                        margin: EdgeInsets.only(right: 15),
                         height: 200,
                         width: 130,
                         decoration: BoxDecoration(
@@ -269,19 +288,24 @@ class Gosure extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(left:0,right:0,top:0),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Asuransi Jiwa",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("PasarPolis",textAlign: TextAlign.start,
-                              
-                              ),
-                                ],
-                              )
-                            )
+                                margin:
+                                    EdgeInsets.only(left: 0, right: 0, top: 0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Asuransi Jiwa",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "PasarPolis",
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       ),
@@ -323,19 +347,24 @@ class Gosure extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(left:15,right:0,top:5),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Asuransi Rawat Inap Rumah Sakit",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("PasarPolis",textAlign: TextAlign.start,
-                              
-                              ),
-                                ],
-                              )
-                            )
+                                margin:
+                                    EdgeInsets.only(left: 15, right: 0, top: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Asuransi Rawat Inap Rumah Sakit",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "PasarPolis",
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       )
@@ -368,11 +397,11 @@ class Gosure extends StatelessWidget {
                 ),
                 Container(
                   // color: Colors.white,
-                 margin: EdgeInsets.only(top:15,bottom: 15),
+                  margin: EdgeInsets.only(top: 15, bottom: 15),
                   child: Row(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(right: 15,bottom: 10),
+                        margin: EdgeInsets.only(right: 15, bottom: 10),
                         height: 200,
                         width: 130,
                         decoration: BoxDecoration(
@@ -410,19 +439,24 @@ class Gosure extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(left:15,right:0,top:5),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Perlindungan Penerbangan",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("PasarPolis",textAlign: TextAlign.start,
-                              
-                              ),
-                                ],
-                              )
-                            )
+                                margin:
+                                    EdgeInsets.only(left: 15, right: 0, top: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Perlindungan Penerbangan",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "PasarPolis",
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       ),
@@ -464,19 +498,24 @@ class Gosure extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(left:15,right:0,top:5),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Perlindungan Kereta Api",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("PasarPolis",textAlign: TextAlign.start,
-                              
-                              ),
-                                ],
-                              )
-                            )
+                                margin:
+                                    EdgeInsets.only(left: 15, right: 0, top: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Perlindungan Kereta Api",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "PasarPolis",
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       )
@@ -500,10 +539,10 @@ class Gosure extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-                
+
                 Container(
                   // color: Colors.white,
-                  margin: EdgeInsets.only(top:30),
+                  margin: EdgeInsets.only(top: 30),
                   child: Row(
                     children: <Widget>[
                       Container(
@@ -545,19 +584,25 @@ class Gosure extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(left:15,right:0,top:5),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("Portal Claim",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              style: TextStyle(fontWeight: FontWeight.w700),),
-                              Text("Cara Mudah Untuk Claim Perlindungan Kamu",textAlign: TextAlign.start,
-                              maxLines: 2,
-                              ),
-                                ],
-                              )
-                            )
+                                margin:
+                                    EdgeInsets.only(left: 15, right: 0, top: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Portal Claim",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      "Cara Mudah Untuk Claim Perlindungan Kamu",
+                                      textAlign: TextAlign.start,
+                                      maxLines: 2,
+                                    ),
+                                  ],
+                                ))
                           ],
                         ),
                       ),
