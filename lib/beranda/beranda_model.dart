@@ -12,7 +12,8 @@ class GojekService {
 class Food {
   String title;
   String image;
-  Food({this.title, this.image});
+  String harga;
+  Food({this.title, this.image, this.harga});
 }
 
 class Promo{
@@ -20,6 +21,7 @@ class Promo{
   String title;
   String content;
   String button;
+  String harga;
 
-  Promo({this.image, this.title, this.content, this.button});
+  Promo({this.image, this.title, this.content, this.button, this.harga});
 }
