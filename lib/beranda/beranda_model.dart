@@ -25,3 +25,27 @@ class Promo{
 
   Promo({this.image, this.title, this.content, this.button, this.harga});
 }
+
+class Tix {
+  String image;
+  String title;
+  String content;
+
+  Tix({this.image, this.title, this.content});
+
+}
+
+class Tixa {
+  String image;
+  String title;
+  
+
+  Tixa({this.image, this.title});
+
+}
+
+class ProductCard {
+  final String imageURL;
+
+  ProductCard({this.imageURL = ""});
+}

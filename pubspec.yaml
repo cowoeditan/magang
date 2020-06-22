@@ -66,6 +66,22 @@ flutter:
     - assets/images/promo_2.jpg
     - assets/images/promo_3.jpg
     - assets/images/promo_4.jpg
+    - assets/images/tix_1.jpg
+    - assets/images/tix_2.jpg
+    - assets/images/tix_3.jpg
+    - assets/images/tix_4.jpg
+    - assets/images/tix_5.jpg
+    - assets/images/t1.jpg
+    - assets/images/t2.jpg
+    - assets/images/t3.jpg
+    - assets/images/t4.jpg
+    - assets/images/t5.jpg
+    - assets/images/p1.jpg
+    - assets/images/p2.jpg
+    - assets/images/p3.jpg
+    - assets/images/p4.jpg
+    - assets/images/p5.jpg
+    - assets/images/p6.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
