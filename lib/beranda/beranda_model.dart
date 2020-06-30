@@ -49,3 +49,24 @@ class ProductCard {
 
   ProductCard({this.imageURL = ""});
 }
+
+class Game{
+  String image;
+  String title;
+
+  Game({this.image, this.title});
+}
+
+class Gamep{
+  String image;
+  String title;
+
+  Gamep({this.image, this.title});
+}
+
+class Games{
+  String image;
+  String title;
+
+  Games({this.image, this.title});
+}
